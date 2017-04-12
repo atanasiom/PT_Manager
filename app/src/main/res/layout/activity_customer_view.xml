@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/activity_customer_view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:weightSum="1">
+
+	<fragment
+		android:id="@+id/fragment_logged_in_customer"
+		android:name="com.atanasiom.ptmanager.LoggedInFragment"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		tools:layout="@layout/fragment_logged_in" />
+
+	<TextView
+		android:id="@+id/text_customer_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/fragment_logged_in_customer"
+		android:layout_centerHorizontal="true"
+		android:text="@string/text_customer"
+		android:textAlignment="center"
+		android:textColor="@android:color/black"
+		android:textSize="24sp" />
+
+	<ListView
+		android:id="@+id/listview_sessions"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/button_new_session"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentStart="true"
+		android:layout_below="@+id/text_customer_name" />
+
+	<Button
+		android:id="@+id/button_payment_details"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentStart="true"
+		android:text="@string/payment_details" />
+
+	<Button
+		android:id="@+id/button_new_session"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/button_payment_details"
+		android:layout_alignParentStart="true"
+		android:text="@string/new_session" />
+
+</RelativeLayout>

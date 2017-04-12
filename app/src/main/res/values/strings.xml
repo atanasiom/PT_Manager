@@ -5,4 +5,14 @@
 	<string name="login_button">Login</string>
 	<string name="hint_username">Username</string>
 	<string name="hint_password">Password</string>
+	<string name="username">jdoe</string>
+	<string name="password">welcome1</string>
+	<string name="new_customer">+ New Customer</string>
+	<string name="text_customer">Customer Name</string>
+	<string name="new_session">+ New Session</string>
+	<string name="payment_details">Payment Details</string>
+	<string name="logged_in_name">Logged In</string>
+	<string name="hint_card_number">Card Number</string>
+	<string name="accept_payment">Accept Payment</string>
+	<string name="print_reciept">Print Reciept</string>
 </resources>
