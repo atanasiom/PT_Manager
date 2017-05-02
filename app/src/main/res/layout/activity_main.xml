@@ -4,32 +4,6 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
-	<EditText
-		android:id="@+id/field_password"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_centerHorizontal="true"
-		android:layout_centerVertical="true"
-		android:layout_marginRight="142dp"
-		android:ems="10"
-		android:hint="@string/hint_password"
-		android:inputType="textPassword"
-		android:textAlignment="center" />
-
-	<EditText
-		android:id="@+id/field_username"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_above="@+id/field_password"
-		android:layout_alignStart="@+id/field_password"
-		android:ems="10"
-		android:hint="@string/hint_username"
-		android:inputType="textPersonName"
-		android:textAlignment="center">
-
-		<requestFocus />
-	</EditText>
-
 	<Button
 		android:id="@+id/button_login"
 		android:layout_width="wrap_content"
@@ -38,4 +12,31 @@
 		android:layout_centerHorizontal="true"
 		android:onClick="login"
 		android:text="@string/login_button" />
+
+	<EditText
+		android:id="@+id/field_username"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_alignStart="@+id/field_password"
+		android:layout_marginTop="58dp"
+		android:ems="10"
+		android:hint="@string/hint_username"
+		android:inputType="textPersonName"
+		android:textAlignment="center">
+
+		<requestFocus />
+	</EditText>
+
+	<EditText
+		android:id="@+id/field_password"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/field_username"
+		android:layout_centerHorizontal="true"
+		android:layout_marginRight="142dp"
+		android:ems="10"
+		android:hint="@string/hint_password"
+		android:inputType="textPassword"
+		android:textAlignment="center" />
 </RelativeLayout>

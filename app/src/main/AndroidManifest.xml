@@ -21,7 +21,8 @@
 		</activity>
 		<activity android:name=".CustomerListActivity" />
 		<activity android:name=".CustomerViewActivity" />
-		<activity android:name=".CardDetailsActivity"></activity>
+		<activity android:name=".NewCustomerActivity" />
+		<activity android:name=".CardDetailsActivity" />
 	</application>
 
 </manifest>

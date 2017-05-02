@@ -16,4 +16,7 @@
 	<string name="accept_payment">Accept Payment</string>
 	<string name="print_reciept">Print Reciept</string>
 	<string name="name_placeholder">Name</string>
+	<string name="first_name">First Name</string>
+	<string name="last_name">Last Name</string>
+	<string name="create_customer">Create Customer</string>
 </resources>
