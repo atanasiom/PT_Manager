@@ -2,6 +2,7 @@ package com.atanasiom.ptmanager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
 		usernameText = (EditText) findViewById(R.id.field_username);
 		passwordText = (EditText) findViewById(R.id.field_password);
+
+		String[] permissions = {"android.permission.CAMERA"};
+		ActivityCompat.requestPermissions(this, permissions, 1);
 	}
 
 	public void login(View view) {

@@ -2,6 +2,8 @@ package com.atanasiom.ptmanager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +28,13 @@ public class CustomerListViewAdapter extends ArrayAdapter<Customer> {
 		ImageView customerImage = (ImageView) convertView.findViewById(R.id.list_cust_image);
 		TextView customerName = (TextView) convertView.findViewById(R.id.list_cust_name);
 
-		customerImage.setImageResource(this.getItem(position).getCustomerImage());
+		Bitmap bm = BitmapFactory.decodeFile(this.getItem(position).getCustomerImagePath());
+		System.out.println(this.getItem(position).getCustomerImagePath());
+
+		if (bm == null)
+			customerImage.setImageResource(this.getItem(position).getCustomerImage());
+		else
+			customerImage.setImageBitmap(bm);
 		customerName.setText(this.getItem(position).getName());
 
 		return convertView;

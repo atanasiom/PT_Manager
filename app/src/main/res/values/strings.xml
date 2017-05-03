@@ -19,4 +19,5 @@
 	<string name="first_name">First Name</string>
 	<string name="last_name">Last Name</string>
 	<string name="create_customer">Create Customer</string>
+	<string name="take_photo">Take Picture</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:id="@+id/activity_new_customer"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
@@ -35,4 +36,23 @@
 		android:layout_alignParentStart="true"
 		android:onClick="createNewCustomer"
 		android:text="@string/create_customer" />
+
+	<Button
+		android:id="@+id/button_take_photo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/field_lastName"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="29dp"
+		android:onClick="takePicture"
+		android:text="@string/take_photo" />
+
+	<ImageView
+		android:id="@+id/image_new_customer"
+		android:layout_width="200dp"
+		android:layout_height="200dp"
+		android:layout_below="@+id/button_take_photo"
+		android:layout_centerHorizontal="true"
+		app:srcCompat="@drawable/no_picture" />
+
 </RelativeLayout>

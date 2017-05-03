@@ -83,8 +83,13 @@ public class CustomerListActivity extends AppCompatActivity {
 		Cursor resultSet = customerDatabase.rawQuery("SELECT * from " + CUSTOMER_TABLE, null);
 
 		while (resultSet.moveToNext()) {
-			adapter.add(new Customer(resultSet.getString(1) + " " + resultSet.getString(0), Integer.parseInt(resultSet
-					.getString(2))));
+			String path = resultSet.getString(2);
+			try {
+				int res = Integer.parseInt(path);
+				adapter.add(new Customer(resultSet.getString(1) + " " + resultSet.getString(0), res));
+			} catch (NumberFormatException e) {
+				adapter.add(new Customer(resultSet.getString(1) + " " + resultSet.getString(0), path));
+			}
 		}
 
 		adapter.notifyDataSetChanged();
